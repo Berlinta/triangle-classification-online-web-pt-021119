@@ -18,6 +18,8 @@ class Triangle
     end
   end
   
-  
+  class TriangleError < StandardError
+    puts "Invalid triangle. Please try again."
+  end
 
 end
