@@ -14,7 +14,7 @@ class Triangle
     elsif equilateral == isosceles || isosceles == scalene || equilateral == scalene
       :isosceles
     else
-      scalene
+      :scalene
     end
   end
   
