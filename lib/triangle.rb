@@ -11,7 +11,7 @@ class Triangle
   def kind
     size
    if a == b && b == c
-      :equilateral
+      :a
     elsif a == b || b == c || a == c
       :isosceles
     else
@@ -30,5 +30,4 @@ class Triangle
   class TriangleError < StandardError
     puts "Invalid triangle. Please try again."
   end
-
 end
