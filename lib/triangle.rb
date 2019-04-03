@@ -22,7 +22,7 @@ class Triangle
   def size
     if a <= 0 || b <= 0 || c <= 0
       raise TriangleError
-    else a + b <= c || equilateral + scalene <= isosceles || scalene + isosceles <= equilateral
+    else a + b <= c || a + c <= b || b + c <= a
       raise TriangleError
     end
   end
