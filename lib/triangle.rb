@@ -9,6 +9,7 @@ class Triangle
   end
   
   def kind
+    size
     if equilateral == isosceles && isosceles == scalene
       :equilateral
     elsif equilateral == isosceles || isosceles == scalene || equilateral == scalene
