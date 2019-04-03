@@ -1,18 +1,18 @@
 class Triangle
 
-  attr_accessor :equilateral, :isosceles, :scalene
+  attr_accessor :a, :b, :c
 
-  def initialize(equilateral, isosceles, scalene)
-    @equilateral = equilateral
-    @isosceles = isosceles
-    @scalene = scalene
+  def initialize(a, b, c)
+    @a = a
+    @b = b 
+    @c = c
   end
   
   def kind
     size
-    if equilateral == isosceles && isosceles == scalene
+    if a == b && b == c
       :equilateral
-    elsif equilateral == isosceles || isosceles == scalene || equilateral == scalene
+    elsif a == b || b == c || a == c
       :isosceles
     else
       :scalene
@@ -20,9 +20,9 @@ class Triangle
   end
   
   def size
-    if equilateral <= 0 || isosceles <= 0 || scalene <= 0
+    if a <= 0 || b <= 0 || c <= 0
       raise TriangleError
-    else equilateral + isosceles <= scalene || equilateral + scalene <= isosceles || scalene + isosceles <= equilateral
+    else a + b <= c || equilateral + scalene <= isosceles || scalene + isosceles <= equilateral
       raise TriangleError
     end
   end
