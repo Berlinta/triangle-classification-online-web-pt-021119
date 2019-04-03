@@ -11,7 +11,7 @@ class Triangle
   def kind
     size
    if a == b && b == c
-      :eq
+      :equilateral
     elsif a == b || b == c || a == c
       :isosceles
     else
